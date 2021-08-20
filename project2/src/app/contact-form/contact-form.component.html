@@ -1,0 +1,13 @@
+<form [formGroup]="Action" (submit)="submit()">
+    <div class="form-group">
+        <label for="firstName" >Firstname</label>&nbsp;&nbsp;
+        <input required ngModel formControlName="firstName" name="firstName"   id="firstName" type="text" class="form-control">
+        <div class="alert text-danger" *ngIf="submitted && f.firstName.errors">First Name is Required.</div>
+    </div><br/>
+    <div class="form-goup">
+        <label for="comment">Comment</label>&nbsp;&nbsp;
+        <textarea ngModel name="comment" formControlName="comment" id="comment" cols="30" row="10" class="form-control"></textarea>
+    </div><br/>
+    <button class="btn btn-primary" type="submit">Submit</button>
+    
+</form>
